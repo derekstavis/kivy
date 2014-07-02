@@ -68,7 +68,7 @@ Here is an example with a 'Menu Screen' and a 'Settings Screen'::
     # you can control the ScreenManager from kv. Each screen has by default a
     # property manager that gives you the instance of the ScreenManager used.
     Builder.load_string("""
-    <MenuScreen>:
+    <MenuScreen>:sw
         BoxLayout:
             Button:
                 text: 'Goto settings'
@@ -936,7 +936,7 @@ class ScreenManager(FloatLayout):
 
         If any animation is in progress, it will be stopped and replaced by
         this one: you should avoid this because the animation will just look
-        weird. Use either :meth:`switch` or :attr:`current` but not both.
+        weird. Use either :meth:`switch_to` or :attr:`current` but not both.
 
         The `screen` name will be changed if there is any conflict with the
         current screen.
